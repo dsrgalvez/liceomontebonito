@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Liceo Montebonito</title>
+  <link rel="icon" href="favicon.ico" />
   <style>
     body {
       margin: 0;
@@ -11,13 +12,13 @@
       background-color: #f9f9f9;
     }
     header {
-      background-color: #7AC943; /* Verde infantil */
+      background-color: #7AC943;
       color: white;
       padding: 20px;
       text-align: center;
     }
     nav {
-      background-color: #6AB82E; /* Verde menú */
+      background-color: #6AB82E;
       display: flex;
       justify-content: center;
       gap: 20px;
@@ -28,6 +29,10 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 16px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+      color: #dfffd6;
     }
     section {
       padding: 20px;
@@ -51,6 +56,37 @@
       list-style-type: disc;
       padding-left: 20px;
     }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    input, textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    button {
+      padding: 10px;
+      font-size: 16px;
+      background-color: #6AB82E;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #5aa027;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -60,7 +96,7 @@
     <p>Formando desde el pensamiento científico con amor y creatividad</p>
   </header>
 
-  <nav>
+  <nav aria-label="Menú principal">
     <a href="#nosotros">Nosotros</a>
     <a href="#servicios">Servicios</a>
     <a href="#contacto">Contacto</a>
@@ -81,7 +117,7 @@
       Nuestro Proyecto Educativo Institucional (PEI) está orientado al desarrollo del pensamiento científico infantil, fomentando la observación, la curiosidad, la experimentación y el juego como base para el aprendizaje. 
     </p>
     <p>
-      Contamos con clases de música integradas al currículo, un mes dedicado a la ciencia lleno de actividades prácticas, y experiencias significativas diseñadas para fortalecer el desarrollo emocional, cognitivo y social de nuestros niños y niñas. Creemos en una educación con sentido, que respete los ritmos individuales y motive a cada pequeño a brillar con luz propia.
+      Contamos con clases de música integradas al currículo, un mes dedicado a la ciencia lleno de actividades prácticas, y experiencias significativas diseñadas para fortalecer el desarrollo emocional, cognitivo y social de nuestros niños y niñas.
     </p>
   </section>
 
@@ -100,11 +136,25 @@
     <p><strong>Dirección:</strong> Manzana 5 Casa 32, Montebonito, Dosquebradas</p>
     <p><strong>Teléfono:</strong> 317 872 8659</p>
     <p><strong>Email:</strong> lpmontebonito@gmail.com</p>
+
+    <form onsubmit="alert('Gracias por escribirnos'); return false;">
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo" required />
+      <textarea rows="4" placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
   </section>
 
   <footer>
     &copy; 2025 Liceo Montebonito. Todos los derechos reservados.
   </footer>
 
+  <script>
+    window.onload = () => {
+      console.log("Bienvenido al sitio del Liceo Montebonito");
+    };
+  </script>
+
 </body>
 </html>
+
