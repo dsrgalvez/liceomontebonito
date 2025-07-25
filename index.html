@@ -96,9 +96,15 @@
     button:hover {
       background-color: #ef6c00;
     }
-    .video {
+    .video-container {
+      margin-top: 20px;
       text-align: center;
-      margin: 40px 0;
+    }
+    .video-container iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      border: none;
     }
   </style>
 </head>
@@ -120,10 +126,9 @@
     <h2 id="nosotros">¿Quiénes somos?</h2>
     <p>El <strong>Liceo Montebonito</strong> es un jardín infantil dedicado a la formación integral de niños de 2 a 5 años. Creamos ambientes seguros, afectivos y estimulantes que fortalecen el desarrollo emocional, cognitivo y social.</p>
 
-    <div class="video">
-      <h2>Conoce nuestro jardín</h2>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/LYFiJpzqPmo" 
-      title="YouTube video" frameborder="0" allowfullscreen></iframe>
+    <!-- VIDEO DE YOUTUBE -->
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/LYFiJpzqPmo?si=tgTVtzV56nbeY9fz" allowfullscreen></iframe>
     </div>
 
     <h2 id="servicios">Nuestros servicios</h2>
@@ -158,3 +163,4 @@
   </footer>
 </body>
 </html>
+
